@@ -10,7 +10,10 @@ class TestApp(TestCase):
         self.app_context.push()
 
     def tearDown(self):
-        self.app_context.pop
+        self.app_context.pop()
 
     def testAppExist(self):
         self.assertFalse(current_app is None)
+
+    def testAppConfig(self):
+        self.assertTrue(self.app.config['TESTING'])

@@ -22,3 +22,10 @@ class TestModel(TestCase):
         db.session.commit()
         self.assertIsNotNone(category_fiction.id)
 
+    def testBookModel(self):
+        book_one = Book(name='Paly by Play')
+        self.assertIsNone(book_one.id)
+        db.session.add(book_one)
+        db.session.commit()
+        self.assertIsNotNone(book_one.id)
+
