@@ -1,3 +1,5 @@
-env
+env/
 .idea
 *.pyc
+data-dev.sqlite
+data-test.sqlite

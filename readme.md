@@ -1,1 +1,1 @@
-MVP for a simple book invertory web app
+MVP for a simple book inventory web app
