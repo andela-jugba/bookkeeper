@@ -22,4 +22,3 @@ class TestModel(TestCase):
         db.session.commit()
         self.assertIsNotNone(category_fiction.id)
 
-    
