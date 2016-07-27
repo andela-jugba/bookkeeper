@@ -5,8 +5,18 @@
 
 {% block page_content %}
 <div class="page-header">
-    <h1> </h1>}
+    <h1>Search for Books by {{ name }} on BookKeeper! </h1>
 
 </div>
 {{ wtf.quick_form(form) }}
+
+    <div class="col-md-4">
+        {% if matches %}
+        <ul>
+            {% for match in matches %}
+            <li>{{ match.name }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
 {% endblock %}

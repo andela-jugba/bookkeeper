@@ -24,7 +24,11 @@ class Category(db.Model):
 
     @staticmethod
     def search_books_by_cateory(category_name):
-        return Category.query.filter(Category.name==category_name).all()
+        matches = Category.query.filter(Category.name.like(category_name+'%')).first()
+        if matches:
+            return matches.books.all()
+        else:
+            return None
 
     def __repr__(self):
         return '<Category %r>' % self.name
