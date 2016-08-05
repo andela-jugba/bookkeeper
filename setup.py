@@ -14,7 +14,7 @@ setup(name='Bookkeeper',
       version='0.0.1',
 
       # Project description
-      description='Learnig app',
+      description='Learning app',
       long_description=readme,
 
       # Author details
