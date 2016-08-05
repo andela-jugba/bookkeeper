@@ -30,5 +30,3 @@ def category():
             flash('Not Found!')
         redirect(url_for('.category'))
     return render_template('index.html', form=form, matches=g.matches, name='Category')
-
-
