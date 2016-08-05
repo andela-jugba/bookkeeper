@@ -5,7 +5,7 @@ with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 readme = str()
-with open('README.md') as f:
+with open('readme.md') as f:
     readme = f.read()
 
 setup(name='Bookkeeper',
