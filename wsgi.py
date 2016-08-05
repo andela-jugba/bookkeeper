@@ -1,8 +1,8 @@
 import os
-from manage import manager
-
+from app import create_app
+application = create_app('production')
 
 if __name__ == '__main__':
     from wsgiref.simple_server import make_server
-    httpd = make_server('localhost', 8051, manager)
+    httpd = make_server('localhost', 8051, application)
     httpd.serve_forever()
