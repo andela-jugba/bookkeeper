@@ -3,3 +3,4 @@ env/
 *.pyc
 data-dev.sqlite
 data-test.sqlite
+app.py
