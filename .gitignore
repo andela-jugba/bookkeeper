@@ -4,3 +4,7 @@ env/
 data-dev.sqlite
 data-test.sqlite
 app.py
+cover
+tmp
+.coverage
+.DS_Store

@@ -18,15 +18,15 @@ manager.add_command('db', MigrateCommand)
 
 
 @manager.command
-def test():
+def test(coverage=False):
     '''
-    Runs tests
+    Runs Unit tests
 
     '''
-
-    import unittest
-    tests = unittest.TestLoader().discover('tests')
-    unittest.TextTestRunner(verbosity=2).run(tests)
+    from subprocess import call
+    call(['nosetests', '-v',
+          '--with-coverage', '--cover-package=app', '--cover-branches',
+          '--cover-erase', '--cover-html', '--cover-html-dir=cover'])
 
 if __name__ == '__main__':
     manager.run()
